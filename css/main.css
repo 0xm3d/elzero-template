@@ -652,28 +652,28 @@ ul {
 .testimonials .container .box {
     background-color: white;
     position: relative;
-    padding: 20px 15px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+    border-radius: 6px;
 }
 
 .testimonials .container .box img {
-    max-width: 100%;
     width: 100px;
     border-radius: 50%;
     border: 10px solid var(--section-bg-color);
     position: absolute;
-    top: -54px;
-    right: -16px;
+    top: -50px;
+    right: -10px;
 }
 
 .testimonials .container .box h3 {
-    margin-top: 0;
-    margin-bottom: 0;
+    color: var(--main-color);
+    margin: 0 0 10px;
 }
 
 .testimonials .container .box .title {
     display: block;
     color: #777;
-    margin-top: 5px;
     margin-bottom: 10px;
 }
 
@@ -684,6 +684,30 @@ ul {
 .testimonials .container .box p {
     color: #777;
     line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.team {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    background-color: white;
+}
+
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.team .container .box .data img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.team .container .box .data {
+    display: flex ;
 }
 
 
