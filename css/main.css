@@ -697,12 +697,12 @@ ul {
 
 .team .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
 }
 
 .team .container .box {
-    padding-top: 50px;
+    padding-top: 60px;
     position: relative;
     z-index: 1;
 }
@@ -726,7 +726,7 @@ ul {
 .team .container .box::after {
     width: 0;
     z-index: -1;
-    background-color: #ddd;
+    background-color: #e4e4e4;
 }
 
 .team .container .box:hover::after {
@@ -736,7 +736,6 @@ ul {
 .team .container .box .data {
     position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -744,27 +743,31 @@ ul {
     width: calc(100% - 60px);
     border-radius: 10px;
     flex-grow: 1;
-    filter: grayscale();
+    transition: var(--main-transition);
 }
 
 .team .container .box:hover .data img {
-    filter: none;
+    filter: grayscale(100%);
 }
 
 .team .container .box .data .social {
+    width: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 }
 
 .team .container .box .data .social a {
-    padding: 15px;
-    margin: 0 auto;
+    width: 60px;
+    height:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .team .container .box .data .social a i {
     color: #777;
+    transition: var(--main-transition);
 }
 
 .team .container .box .data .social a:hover i {
@@ -773,11 +776,23 @@ ul {
 
 .team .container .box .info {
     position: relative;
-    left: 75px;
+    padding-left: 75px;
 }
 
 .team .container .box .info h3 {
     color: var(--main-color);
+    margin-bottom: 0;
+    transition: var(--main-transition);
+    font-size: 22px;
+}
+
+.team .container .box:hover .info h3 {
+    color: #777;
+}
+
+.team .container .box .info p {
+    margin-top: 10px;
+    margin-bottom: 25px;
 }
 
 @keyframes up-and-down {
