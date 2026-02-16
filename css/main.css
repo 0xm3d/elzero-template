@@ -890,6 +890,50 @@ ul {
     color: var(--main-color);
 }
 
+.our-skills {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+}
+
+.our-skills .container {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .our-skills img {
+        display: none;
+    }
+}
+
+.our-skills .skills {
+    flex: 1;
+}
+
+.our-skills .skills .skill h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.our-skills .skills .skill h3 span {
+    color: var(--main-color);
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+.our-skills .skills .skill .the-progress {
+    background-color: #EEEEEE;
+}
+
+.our-skills .skills .skill .the-progress span {
+    display: block;
+    height: 25px;
+    background-color: var(--main-color);
+}
+
 @keyframes up-and-down {
 
     0%,
