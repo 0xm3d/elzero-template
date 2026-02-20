@@ -934,6 +934,103 @@ ul {
     background-color: var(--main-color);
 }
 
+.how-it-works {
+    background-color: var(--section-bg-color);
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+}
+
+.how-it-works .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.how-it-works .container>img {
+    width: 100%;
+}
+
+.how-it-works .boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: center;
+}
+
+.how-it-works .boxes .box {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    transition: var(--main-transition);
+    position: relative;
+    border: 2px solid white;
+}
+
+.how-it-works .boxes .box::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0;
+    width: 0;
+    top: 0;
+    background-color: var(--section-bg-color);
+    transition: var(--main-transition);
+    border-radius: 15px;
+    z-index: -1;
+}
+
+.how-it-works .boxes .box:hover {
+    transform: translateY(-10px);
+}
+
+.how-it-works .boxes .box:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.how-it-works .container .box img {
+    width: 75px;
+    height: 75px;
+    align-self: center;
+}
+
+@media (max-width: 997px) {
+    .how-it-works .container .box img {
+        display: none;
+    }
+}
+
+.how-it-works .boxes .box .info {
+    flex: 1;
+}
+
+.how-it-works .boxes .box .info h3 {
+    font-size: 18px;
+    transition: var(--main-transition);
+}
+
+.how-it-works .boxes .box:hover .info h3 {
+    color: var(--main-color);
+}
+
+.how-it-works .boxes .box .info p {
+    line-height: 1.3;
+    color: #777;
+    transition: var(--main-transition);
+}
+
+.how-it-works .boxes .box:hover .info p {
+    color: black;
+}
+
 @keyframes up-and-down {
 
     0%,
