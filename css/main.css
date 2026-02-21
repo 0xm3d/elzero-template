@@ -948,8 +948,14 @@ ul {
     gap: 50px;
 }
 
+@media (max-width: 997px) {
+    .how-it-works .container {
+        flex-direction: column;
+    }
+}
+
 .how-it-works .container>img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .how-it-works .boxes {
@@ -961,7 +967,7 @@ ul {
 }
 
 .how-it-works .boxes .box {
-    background-color: white;
+    background-color: #f6f5f5;
     display: flex;
     justify-content: space-between;
     gap: 25px;
@@ -971,17 +977,18 @@ ul {
     transition: var(--main-transition);
     position: relative;
     border: 2px solid white;
+    z-index: 1;
 }
 
 .how-it-works .boxes .box::before {
     content: '';
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     height: 0;
     width: 0;
-    top: 0;
-    background-color: var(--section-bg-color);
+    background-color: #ededed;
     transition: var(--main-transition);
     border-radius: 15px;
     z-index: -1;
@@ -1000,12 +1007,6 @@ ul {
     width: 75px;
     height: 75px;
     align-self: center;
-}
-
-@media (max-width: 997px) {
-    .how-it-works .container .box img {
-        display: none;
-    }
 }
 
 .how-it-works .boxes .box .info {
@@ -1029,6 +1030,70 @@ ul {
 
 .how-it-works .boxes .box:hover .info p {
     color: black;
+}
+
+.events {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+}
+
+.events .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.events img {
+    max-width: 450px;
+}
+
+@media (max-width: 991px) {
+    .events img {
+        display: none;
+    }
+}
+
+.events .info {
+    flex: 1;
+}
+
+.events .info .time {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    gap: 10px;
+    justify-content: center;
+}
+
+.events .info .time .unit {
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    text-align: center;
+    width: 75px;
+    transition: var(--main-transition);
+}
+
+.events .info .time .unit span {
+    display: block;
+}
+
+.events .info .time .unit span:first-child {
+    font-size: 35px;
+    padding: 15px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.events .info .time .unit span:last-child {
+    padding: 8px 15px;
+    font-size: 13px;
+    border-top: 1px solid #d4d4d4;
+}
+
+.events .subscribe {
+    width: 100%;
+    margin-top: 50px;
 }
 
 @keyframes up-and-down {
