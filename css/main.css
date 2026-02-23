@@ -1138,7 +1138,7 @@ ul {
 }
 
 @media (max-width: 767px) {
-    .events .subscribe form input {
+    .events .subscribe form {
         max-width: 100%;
         padding: 20px;
         flex-direction: column;
@@ -1315,6 +1315,73 @@ ul {
     background-color: var(--main-color-alt);
     border-color: var(--main-color-alt);
     color: white;
+}
+
+.videos {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.videos .holder {
+    display: flex;
+    justify-content: center;
+    background-color: var(--section-bg-color);
+    border: 1px solid #ddd;
+}
+
+@media (max-width: 991px) {
+    .videos .holder {
+        flex-direction: column;
+    }
+}
+
+.videos .holder .list {
+    min-width: 300px;
+    background-color: white;
+}
+
+.videos .holder .list .name {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.videos .holder .list ul li {
+    padding: 20px;
+    border-top: 1px solid var(--section-bg-color);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.videos .holder .list li:hover{
+    color: var(--main-color);
+    background-color: #fafafa;
+}
+
+.videos .holder .list ul li span {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+}
+
+.videos .holder .preview {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #e2e2e2;
+}
+
+.videos .holder .preview img {
+    max-width: 100%;
+}
+
+.videos .holder .preview .info {
+    padding: 20px;
+    background-color: white;
+    margin-top: 10px;
 }
 
 @keyframes up-and-down {
