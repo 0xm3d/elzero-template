@@ -1384,6 +1384,198 @@ ul {
     margin-top: 10px;
 }
 
+.stats {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-image: url("../images/stats.jpg");
+    background-size: cover;
+    min-height: 300px;
+    position: relative;
+}
+
+.stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 95%);
+}
+
+.stats h2 {
+    font-weight: bold;
+    font-size: 40px;
+    width: fit-content;
+    margin: 0 auto 50px;
+    position: relative;
+}
+
+.stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.stats .container .box {
+    position: relative;
+    opacity: 0.8;
+    background-color: white;
+    text-align: center;
+    padding: 30px 15px;
+    transition: var(--main-transition);
+}
+
+.stats .container .box::before,
+.stats .container .box::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 0;
+    transition: 1s;
+    background-color: var(--main-color);
+}
+
+.stats .container .box::before {
+    left: 0;
+    bottom: 0;
+}
+
+.stats .container .box::after {
+    right: 0;
+    top: 0;
+}
+
+.stats .container .box:hover {
+    opacity: 1;
+}
+
+.stats .container .box:hover::before,
+.stats .container .box:hover::after {
+    height: 100%;
+}
+
+.stats .box .number {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.stats .box .text {
+    color: var(--main-color);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.stats .box:hover .text {
+    color: var(--main-color-alt);
+}
+
+.discount {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.discount .image {
+    background-image: url("../images/discount-background1.jpg");
+    background-size: cover;
+    color: white;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    animation: change-background 10s linear infinite;
+
+}
+
+.discount .image::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgb(23 135 224 / 97%);
+}
+
+.discount .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+}
+
+@media (max-width: 991px) {
+    .discount .image,
+    .discount .form {
+        flex-basis: 100%;
+    }
+}
+
+.discount .form .input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    caret-color: var(--main-color);
+    background-color: #F9F9F9;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 25px;
+}
+
+.discount .form textarea.input {
+    resize: none;
+    height: 200px;
+}
+
+.discount .form .input:focus {
+    outline: none;
+}
+
+.discount .form [type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    transition: var(--main-transition);
+}
+
+.discount .form [type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+
+.discount .content {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.discount .content h2 {
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
+.discount .content p {
+    line-height: 1.6;
+    font-size: 18px;
+    max-width: 500px;
+}
+
+.discount .content img {
+    width: 300px;
+    max-width: 100%;
+}
+
 @keyframes up-and-down {
 
     0%,
@@ -1466,5 +1658,14 @@ ul {
 @keyframes to-left {
     100% {
         width: calc(100% - 60px);
+    }
+}
+
+@keyframes change-background {
+    0, 100% {
+        background-image: url("../images/discount-background1.jpg");
+    }
+    50% {
+        background-image: url("../images/discount-background2.jpg");
     }
 }
