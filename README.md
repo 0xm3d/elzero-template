@@ -38,12 +38,14 @@
 
 ## 📂 Project Structure
 
+```
 elzero-template/
 ├─ index.html
 ├─ css/
 ├─ images/
 ├─ webfonts/
 └─ README.md
+```
 
 
 ---
